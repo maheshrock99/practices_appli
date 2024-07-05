@@ -29,22 +29,25 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				
+				
 				<configuration>
-        <cloudHubDeployment>
-            <uri>https://anypoint.mulesoft.com</uri>
-            <muleVersion>${mule.version}</muleVersion>
-            <!-- Deploy user parameter  -->
-            <username>${anypoint.username}</username>
-            <password>${anypoint.password}</password>
-            
-            <applicationName>${appname}</applicationName>
-            <businessGroup>${business}</businessGroup>
-            <environment>Sandbox</environment>
-            <workerType>vCore</workerType>
-            <workers>${workers}</workers>
-            <objectStoreV2>true</objectStoreV2>
-        </cloudHubDeployment>
-    </configuration>
+				    <cloudHubDeployment>
+				      <uri>https://anypoint.mulesoft.come</uri>
+				      <muleVersion>(mule.version)</muleVersion>
+				      <username>$(anypoint.username) </username>
+				      <password>$(anypoint.password)</password>
+				      <applicationName>$(appname) </applicationName> 
+				      <environment>env</environment> 
+				      <workerType>$(vcore)</workerType>
+				      <objectStoreV2>true</objectStoreV2>
+				      <businessGroup>$(business)</businessGroup>
+				      <workers>$(workers)</workers>
+				     </cloudHubDeployment>
+				 <classifier>mule-application</classifier>
+			   </configuration>
+			   
+			   
 			</plugin>
 		</plugins>
 	</build>
