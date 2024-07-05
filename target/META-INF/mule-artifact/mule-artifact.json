@@ -1,0 +1,26 @@
+{
+  "configs": [
+    "practice_api.xml"
+  ],
+  "secureProperties": [],
+  "supportedJavaVersions": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:testing_appli:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.6.0",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "api/practice_api.raml",
+        "log4j2.xml",
+        "practice_api.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
